@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<section class="detail">
+  <div class="card">
+    <div class="card-header d-flex aling-items-center">
+      <p class="name ms-4 fs-2">Pokemon: {{  hero?.name || "No pokemon find" | firstLetterUppercase }}</p>
+    </div>
+    <div class="card-body " *ngIf="hero">
+      <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+          <p>Order:</p>
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+          <p>{{ hero.order }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+          <p>Image:</p>
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+            <img class="pokemon-img" [src]=hero.sprites.front_default />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+          <p>Height:</p>
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+          <p>{{ hero.height }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+          <p>Weight:</p>
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+          <p>{{ hero.weight }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <button class="btn btn-blue rounded-pill" (click)="onBack()">Back</button>
+    </div>
+  </div>
+</section>

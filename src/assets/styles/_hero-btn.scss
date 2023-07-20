@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins";
+
+.btn,
+.btn-blue {
+  width: 15rem;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.btn-blue {
+  background-color: $blue;
+  color: $white;
+
+  &:hover:enabled {
+    background-color: $dark-blue;
+    color: $white;
+    border-color: $dark-blue;
+  }
+}

@@ -1,0 +1,19 @@
+$blue: #0075BE;
+$dark-blue: #0A285F;
+$black: #343a40;
+$light-black: #495057;
+$white: #f8f9fa;
+$yellow: #FFCC00;
+
+$app-colors: () !default;
+$app-colors: map-merge(
+  (
+    "blue": $blue,
+    "dark-blue": $dark-blue,
+    "black": $black,
+    "light-black": $light-black,
+    "white": $white,
+    "yellow": $yellow
+  ),
+  $app-colors
+);

@@ -1,0 +1,17 @@
+@import "/src/assets/styles/variables";
+
+.section {
+  overflow-x: hidden;
+  .row {
+    .content {
+      h1,
+      h2,
+      p {
+        color: $blue;
+      }
+    }
+    .pikatchu {
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<section class="container mt-5">
+  <div class="spinner-border spinner" role="status" *ngIf="isLoading">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <ngx-datatable
+    *ngIf="!isLoading"
+    class="ngx-datatable bootstrap"
+    [rows]="heroes"
+    [headerHeight]="50"
+    [footerHeight]="40"
+    rowHeight="auto"
+    [reorderable]="reorderable"
+    [limit]="20"
+    [loadingIndicator]="!isLoading"
+  >
+    <ngx-datatable-column name="Name" [width]="300">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <span (click)="onNavigateTo(value)" class="name">
+          {{ value | firstLetterUppercase }}
+        </span>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Url" [width]="500">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        <span class="url">{{ value }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</section>
